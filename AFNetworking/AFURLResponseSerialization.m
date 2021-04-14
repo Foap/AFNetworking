@@ -100,7 +100,8 @@ id AFJSONObjectByRemovingKeysWithNullValues(id JSONObject, NSJSONReadingOptions 
     }
 
     self.acceptableStatusCodes = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(200, 100)];
-    self.acceptableContentTypes = nil;
+//    self.acceptableContentTypes = nil;
+    self.acceptableContentTypes =  [[NSSet alloc] initWithObjects:@"image/tiff", @"image/jpeg", @"image/jpg" @"image/gif", @"image/png", @"image/ico", @"image/x-icon", @"image/bmp", @"image/x-bmp", @"image/x-xbitmap", @"image/x-win-bitmap", @"image/webp", @"binary/octet-stream", @"application/octet-stream", @"image/heic", @"image/heic-sequence", nil];
 
     return self;
 }
@@ -667,7 +668,9 @@ static UIImage * AFInflatedImageFromResponseWithDataAtScale(NSHTTPURLResponse *r
         return nil;
     }
 
-    self.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"image/tiff", @"image/jpeg", @"image/gif", @"image/png", @"image/ico", @"image/x-icon", @"image/bmp", @"image/x-bmp", @"image/x-xbitmap", @"image/x-win-bitmap", nil];
+//    self.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"image/tiff", @"image/jpeg", @"image/gif", @"image/png", @"image/ico", @"image/x-icon", @"image/bmp", @"image/x-bmp", @"image/x-xbitmap", @"image/x-win-bitmap", nil];
+    
+    self.acceptableContentTypes =  [[NSSet alloc] initWithObjects:@"image/tiff", @"image/jpeg", @"image/jpg" @"image/gif", @"image/png", @"image/ico", @"image/x-icon", @"image/bmp", @"image/x-bmp", @"image/x-xbitmap", @"image/x-win-bitmap", @"image/webp", @"binary/octet-stream", @"application/octet-stream", @"image/heic", @"image/heic-sequence", nil];
 
 #if TARGET_OS_IOS || TARGET_OS_TV
     self.imageScale = [[UIScreen mainScreen] scale];
