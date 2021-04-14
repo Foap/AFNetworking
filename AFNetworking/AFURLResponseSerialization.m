@@ -670,7 +670,23 @@ static UIImage * AFInflatedImageFromResponseWithDataAtScale(NSHTTPURLResponse *r
 
 //    self.acceptableContentTypes = [[NSSet alloc] initWithObjects:@"image/tiff", @"image/jpeg", @"image/gif", @"image/png", @"image/ico", @"image/x-icon", @"image/bmp", @"image/x-bmp", @"image/x-xbitmap", @"image/x-win-bitmap", nil];
     
-    self.acceptableContentTypes =  [[NSSet alloc] initWithObjects:@"image/tiff", @"image/jpeg", @"image/jpg" @"image/gif", @"image/png", @"image/ico", @"image/x-icon", @"image/bmp", @"image/x-bmp", @"image/x-xbitmap", @"image/x-win-bitmap", @"image/webp", @"binary/octet-stream", @"application/octet-stream", @"image/heic", @"image/heic-sequence", nil];
+    self.acceptableContentTypes =  [[NSSet alloc] initWithObjects:@"image/tiff",
+                                                                  @"image/jpeg",
+                                                                  @"image/jpg",
+                                                                  @"image/gif",
+                                                                  @"image/png",
+                                                                  @"image/ico",
+                                                                  @"image/x-icon",
+                                                                  @"image/bmp",
+                                                                  @"image/x-bmp",
+                                                                  @"image/x-xbitmap",
+                                                                  @"image/x-win-bitmap",
+                                                                  @"image/webp",
+                                                                  @"binary/octet-stream",
+                                                                  @"application/octet-stream",
+                                                                  nil];
+    
+    
     
     NSArray *array = [self.acceptableContentTypes allObjects];
     NSLog(@"ContentTypes: %@",array);
